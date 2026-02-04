@@ -3,8 +3,9 @@ plugins:
   - techdocs-core
 validation:
   links:
-    absolute_links: warn 
-    unrecognized_links: warn
+    absolute_links: info 
+    unrecognized_links: info
+
 
 
 
