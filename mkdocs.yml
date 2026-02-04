@@ -1,7 +1,8 @@
 site_name: macros
-plugins:
-  - techdocs-core
-  - macros
+validation:
+  links:
+    absolute_links: check 
+
 
 
 
